@@ -1,6 +1,10 @@
 ## MyBatis-Plus demo项目
+1、创建数据库
+2、执行下面sql脚本
+3、运行项目或执行单测进行测试
 
 ## sql脚本
+### ddl
 CREATE TABLE test.`user` (
 `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
 `name` varchar(30) DEFAULT NULL COMMENT '姓名',
@@ -21,6 +25,6 @@ CREATE TABLE test.`orders` (
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='订单'
 
-## 插入单测数据
+### dml
 INSERT INTO test.`user`(`id`,`name`,`age`,`email`,`deleted`,`create_by`,`tel_phone`) VALUES (1,'Jack',18,'1@126.com',0,NULL,'13512344321');
 INSERT INTO test.`orders`(`id`,`name`,`user_id`,`deleted`) VALUES (1,'订单',1,0);

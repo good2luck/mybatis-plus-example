@@ -1,4 +1,8 @@
-## MyBatis-Plus demo项目
+# MyBatis-Plus demo项目
+
+## 相关原理分析文章
+https://www.xudj.top/categories/mybatis-plus
+
 ## 执行
 1、创建数据库
 2、执行下面sql脚本

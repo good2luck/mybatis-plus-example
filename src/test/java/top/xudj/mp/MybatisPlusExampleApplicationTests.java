@@ -3,6 +3,8 @@ package top.xudj.mp;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import top.xudj.mp.mapper.OrderMapper;
@@ -42,6 +44,12 @@ class MybatisPlusExampleApplicationTests {
         System.out.println(userList);
     }
 
-
+    @Test
+    public void testSelectPage() {
+        IPage page = new Page(1, 2);
+        IPage<User> userPage = userService.getBaseMapper()
+                .selectPage(page, new QueryWrapper<>());
+        System.out.println(userPage);
+    }
 
 }
